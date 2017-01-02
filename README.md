@@ -1,7 +1,7 @@
 # Sample Viber bot
 
 A simple starting point for creating a Node.js based Viber bot. This bot allows you to test if a website is down for everyone or just you.
-You can download the [completed bot](https://github.com/ItamarM/isitup-bot-viber/archive/master.zip) or just follow the [**tutorial**](docs/TUTORIAL.md).
+You can download the [completed bot](https://github.com/Viber/sample-bot-isitup/archive/master.zip) or just follow the [**tutorial**](docs/TUTORIAL.md).
 
 ![][1]
 
@@ -15,7 +15,7 @@ You can download the [completed bot](https://github.com/ItamarM/isitup-bot-viber
 * Clone the repository
 
 ```bash
-git clone https://github.com/ItamarM/isitup-bot-viber myviberbot
+git clone https://github.com/Viber/sample-bot-isitup myviberbot
 cd myviberbot
 ```
 

@@ -1,6 +1,6 @@
 # Create your first Viber bot
 
-This tutorial will show you how to create a simple Viber bot. Download the finished product from [GitHub](https://github.com/ItamarM/isitup-bot-viber).
+This tutorial will show you how to create a simple Viber bot. Download the finished product from [GitHub](https://github.com/Viber/sample-bot-isitup).
 
 ## What we're going to do
 
@@ -52,7 +52,7 @@ If you don't have Git, grab the installers from the [git website](https://git-sc
 * Extract the Public Account authentication token - The authentication token is generated upon Public Account creation and can be viewed by the account's admins in the "edit info" screen of their Public Account.
 
 ![][1]
- 
+
 ## Setting up the project
 
 Now that we have our Public Account authentication token we can start to setup our NodeJs project.
@@ -102,7 +102,7 @@ Here’s the content of the package.json:
 
 ## Implementing the bot
 
-Move to your text editor and **create** the file `index.js` within our project folder. 
+Move to your text editor and **create** the file `index.js` within our project folder.
 
 Firstly, let's import and configure our bot with your Public Account authentication token and logger. Make sure you paste the public account authentication token during initialization.
 
@@ -158,7 +158,7 @@ bot.onSubscribe(response => {
 });
 ```
 
-Now, we should write the core function which will actually test a given url against `isup.me`. 
+Now, we should write the core function which will actually test a given url against `isup.me`.
 We're going to take the text exactly as it's typed by the user, and rely on isup.me to check the validity of the domain. If it's not a valid domain, isup.me will respond with a given message.
 
 ```javascript
@@ -193,7 +193,7 @@ function checkUrlAvailability(botResponse, urlToCheck) {
 }
 ```
 
-Finally, we'd like to direct any text message to the `checkUrlAvailability` function. 
+Finally, we'd like to direct any text message to the `checkUrlAvailability` function.
 
 ```javascript
 bot.onTextMessage(/./, (message, response) => {
@@ -232,9 +232,8 @@ Setup [Heroku CLI](https://toolbelt.heroku.com) as instructed. After that is set
 
 
 ## Download This Project
-If you haven't downloaded the completed project yet, you can get it from [GitHub](https://github.com/ItamarM/isitup-bot-viber).
+If you haven't downloaded the completed project yet, you can get it from [GitHub](https://github.com/Viber/sample-bot-isitup).
 
 
 [1]: authToken.jpg
 [2]: output.gif
-
