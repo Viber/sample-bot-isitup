@@ -19,8 +19,16 @@ git clone https://github.com/Viber/sample-bot-isitup myviberbot
 cd myviberbot
 ```
 
-* Copy .env.example to .env with `cp .env.example .env`
-* Edit .env with your Public Account authentication token
+* Edit [`index.js`](src/index.js) with your [Public Account authentication token](https://developers.viber.com/public-accounts/index.html#authentication-token), under the `ViberBot` initialization phase
+
+```javascript
+const bot = new ViberBot(logger, {
+    authToken: "Your Public Account access token goes here",
+    name: "MyViberBot",
+    avatar: "http://example.com/avatar"
+});
+```
+
 * Deploy the bot with [now CLI](https://zeit.co/now/). To get started using now, install it from npm
 
 ```bash

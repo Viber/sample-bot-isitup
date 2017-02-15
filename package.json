@@ -1,6 +1,6 @@
 {
   "name": "isitup-bot",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A bot interface to work with Viber API",
   "author": "Itamar",
   "repository": "https://github.com/Viber/sample-bot-isitup",
@@ -14,10 +14,9 @@
   },
   "license": "MIT",
   "dependencies": {
-    "dotenv": "^2.0.0",
     "express": "4.13.4",
     "request": "^2.79.0",
-    "viber-bot": "^1.0.1",
+    "viber-bot": "^1.0.6",
     "winston": "^2.3.0",
     "winston-console-formatter": "^0.3.1"
   },

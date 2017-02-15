@@ -19,8 +19,8 @@ Our script is going to perform the following tasks
 
 ## Prerequisites
 
-* Text editor. If you want a free one, I recommend [Atom](https://atom.io)
-* Node.js v5 or higher
+* Text editor. If you want a free one, I recommend [Visual Studio Code](https://code.visualstudio.com/)
+* `Node.js` v5 or higher
 * npm (which comes bundled with Node)
 * git
 
@@ -49,7 +49,7 @@ If you don't have Git, grab the installers from the [git website](https://git-sc
 
 ## Set up your Viber Public Account
 * Follow the steps to create a [Public Account](https://support.viber.com/customer/en/portal/articles/2618216-creating-a-public-account?b_id=3838).
-* Extract the Public Account authentication token - The authentication token is generated upon Public Account creation and can be viewed by the account's admins in the "edit info" screen of their Public Account.
+* Extract the [Public Account authentication token](https://developers.viber.com/public-accounts/index.html#authentication-token) - The authentication token is generated upon Public Account creation and can be viewed by the account's admins in the "edit info" screen of their Public Account.
 
 ![][1]
 
@@ -73,7 +73,7 @@ npm init
 Now let’s install our dependencies:
 
 ```bash
-npm i --save viber-bot dotenv express request winston winston-console-formatter
+npm i --save viber-bot express request winston winston-console-formatter
 ```
 
 Here’s the content of the package.json:
@@ -89,10 +89,9 @@ Here’s the content of the package.json:
   },
   "author": "",
   "dependencies": {
-    "dotenv": "^2.0.0",
     "express": "4.13.4",
     "request": "^2.79.0",
-    "viber-bot": "^1.0.1",
+    "viber-bot": "^1.0.6",
     "winston": "^2.3.0",
     "winston-console-formatter": "^0.3.1"
   },
@@ -104,7 +103,7 @@ Here’s the content of the package.json:
 
 Move to your text editor and **create** the file `index.js` within our project folder.
 
-Firstly, let's import and configure our bot with your Public Account authentication token and logger. Make sure you paste the public account authentication token during initialization.
+Firstly, let's import and configure our bot with your [Public Account authentication token](https://developers.viber.com/public-accounts/index.html#authentication-token) and logger. Make sure you paste the public account authentication token during initialization.
 
 ```javascript
 const ViberBot  = require('viber-bot').Bot;
@@ -127,7 +126,7 @@ const logger = createLogger();
 
 // Creating the bot with access token, name and avatar
 const bot = new ViberBot(logger, {
-    authToken: YOUR_AUTH_TOKEN_HERE, // <--- Paste your token here
+    authToken: "Your Public Account access token goes here", // <--- Paste your token here
     name: "Is It Up",  // <--- Your bot name here
     avatar: "http://api.adorable.io/avatar/200/isitup" // It is recommended to be 720x720, and no more than 100kb.
 });
@@ -222,7 +221,6 @@ Setup [Heroku CLI](https://toolbelt.heroku.com) as instructed. After that is set
 
 * `heroku login`
 * `heroku create myawesomebot` - Create a Heroku app. You can replace `myawesomebot` with anything. The name of your bot is a good choice, but if the command says that name is taken, chose anything
-* `heroku config:set VIBER_PUBLIC_ACCOUNT_ACCESS_TOKEN_KEY=Your public account access token` - Use your Public Account access token
 * `heroku config:set HEROKU_URL=$(heroku apps:info -s  | grep web_url | cut -d= -f2)` - Exposes the Heroku app URL from inside the app (so the bot will be able to set the webhook)
 * `git push heroku master` - Deploys your bot
 

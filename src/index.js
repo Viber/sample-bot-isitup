@@ -6,7 +6,6 @@ const TextMessage = require('viber-bot').Message.Text;
 
 const winston = require('winston');
 const toYAML = require('winston-console-formatter');
-require('dotenv').config();
 
 var request = require('request');
 
@@ -57,7 +56,7 @@ const logger = createLogger();
 
 // Creating the bot with access token, name and avatar
 const bot = new ViberBot(logger, {
-    authToken: process.env.VIBER_PUBLIC_ACCOUNT_ACCESS_TOKEN_KEY, // Learn how to get your access token at developers.viber.com
+    authToken: "Your Public Account access token goes here", // Learn how to get your access token at developers.viber.com
     name: "Is It Up",
     avatar: "https://raw.githubusercontent.com/devrelv/drop/master/151-icon.png" // Just a placeholder avatar to display the user
 });
