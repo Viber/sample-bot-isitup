@@ -10,6 +10,7 @@
   },
   "main": "src/index.js",
   "scripts": {
+    "publish": "node bot-deploy.js",
     "start": "node src/index.js"
   },
   "license": "MIT",
@@ -21,7 +22,10 @@
     "winston-console-formatter": "^0.3.1"
   },
   "devDependencies": {
+    "moniker": "^0.1.2",
+    "prompt": "^1.0.0",
     "eslint": "^2.10.1",
+    "shelljs": "^0.7.7",
     "nodeunit": "~0.10.2"
   }
 }

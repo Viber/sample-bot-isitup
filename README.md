@@ -19,26 +19,18 @@ git clone https://github.com/Viber/sample-bot-isitup myviberbot
 cd myviberbot
 ```
 
-* Edit [`index.js`](src/index.js) with your [Public Account authentication token](https://developers.viber.com/public-accounts/index.html#authentication-token), under the `ViberBot` initialization phase
+* Get your [Public Account authentication token](https://developers.viber.com/public-accounts/index.html#authentication-token)
 
-```javascript
-const bot = new ViberBot(logger, {
-    authToken: "Your Public Account access token goes here",
-    name: "MyViberBot",
-    avatar: "http://example.com/avatar"
-});
-```
-
-* Deploy the bot with [now CLI](https://zeit.co/now/). To get started using now, install it from npm
+* We will deploy the bot with [now CLI](https://zeit.co/now/). To get started using `now`, install it from `npm`
 
 ```bash
 npm install -g now
 ```
 
-* Let's deploy our bot. Run the following command in the cloned repository folder
+* Let's deploy our bot with access token . Edit the following command with your access token and run it in the cloned repository folder
 
 ```bash
-now
+now -e VIBER_PUBLIC_ACCOUNT_ACCESS_TOKEN_KEY="YOUR_PUBLIC_ACCOUNT_TOKEN"
 ```
 
 **That's it!** Now your bot is deployed. Start talking with it in your Viber app. Simply navigate to your public account and click on the `Message` button.
