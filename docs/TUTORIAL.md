@@ -103,7 +103,7 @@ Here’s the content of the package.json:
 
 Move to your text editor and **create** the file `index.js` within our project folder.
 
-Firstly, let's import and configure our bot with your [Public Account authentication token](https://developers.viber.com/public-accounts/index.html#authentication-token) and logger. Make sure you paste the public account authentication token during initialization.
+Firstly, let's import and configure our bot with your [Public Account authentication token](https://developers.viber.com/public-accounts/index.html#authentication-token) and logger. **Make sure** you paste the Public Account authentication token during initialization.
 
 ```javascript
 const ViberBot  = require('viber-bot').Bot;
