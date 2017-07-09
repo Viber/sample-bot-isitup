@@ -48,8 +48,8 @@ If you don't have Git, grab the installers from the [git website](https://git-sc
 
 
 ## Set up your Viber Public Account
-* Follow the steps to create a [Public Account](https://support.viber.com/customer/en/portal/articles/2618216-creating-a-public-account?b_id=3838).
-* Extract the [Public Account authentication token](https://developers.viber.com/public-accounts/index.html#authentication-token) - The authentication token is generated upon Public Account creation and can be viewed by the account's admins in the "edit info" screen of their Public Account.
+* Follow the steps to create a [Public Account](https://developers.viber.com/docs/general/getting-started-with-bots/).
+* Extract the [Public Account authentication token](https://developers.viber.com/docs/general/public-accounts/#authentication-token) - The authentication token is generated upon Public Account creation and can be viewed by the account's admins in the "edit info" screen of their Public Account.
 
 ![][1]
 
@@ -103,7 +103,7 @@ Here’s the content of the package.json:
 
 Move to your text editor and **create** the file `index.js` within our project folder.
 
-Firstly, let's import and configure our bot with your [Public Account authentication token](https://developers.viber.com/public-accounts/index.html#authentication-token) and logger. **Make sure** you paste the Public Account authentication token during initialization.
+Firstly, let's import and configure our bot with your [Public Account authentication token](https://developers.viber.com/docs/general/public-accounts/#authentication-token) and logger. **Make sure** you paste the Public Account authentication token during initialization.
 
 ```javascript
 const ViberBot  = require('viber-bot').Bot;
