@@ -8,7 +8,7 @@ You can download the [completed bot](https://github.com/Viber/sample-bot-isitup/
 ## Prerequisites
 
 * [Node.js 5.0+](http://nodejs.org)
-* [Get your Viber Public Account authentication token](https://support.viber.com/customer/en/portal/articles/2618216-creating-a-public-account?b_id=3838)
+* [Get your Viber Public Account authentication token](https://developers.viber.com/docs/general/getting-started-with-bots/)
 
 ## Usage
 
@@ -19,7 +19,7 @@ git clone https://github.com/Viber/sample-bot-isitup myviberbot
 cd myviberbot
 ```
 
-* Get your [Public Account authentication token](https://developers.viber.com/public-accounts/index.html#authentication-token)
+* Get your [Public Account authentication token](https://developers.viber.com/docs/general/getting-started-with-bots/)
 
 * We will deploy the bot with [now CLI](https://zeit.co/now/). To get started using `now`, install it from `npm`
 
