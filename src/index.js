@@ -6,6 +6,7 @@ const TextMessage = require('viber-bot').Message.Text;
 
 const winston = require('winston');
 const toYAML = require('winston-console-formatter');
+const ngrok = require('./get_public_url');
 
 var request = require('request');
 
@@ -88,5 +89,16 @@ if (process.env.NOW_URL || process.env.HEROKU_URL) {
 
     http.createServer(bot.middleware()).listen(port, () => bot.setWebhook(process.env.NOW_URL || process.env.HEROKU_URL));
 } else {
-    logger.debug('Could not find the now.sh/Heroku environment variables. Please make sure you followed readme guide.');
+    logger.debug('Could not find the now.sh/Heroku environment variables. Trying to use the local ngrok server.');
+    return ngrok.getPublicUrl().then(publicUrl => {
+        const http = require('http');
+        const port = process.env.PORT || 8080;
+
+        http.createServer(bot.middleware()).listen(port, () => bot.setWebhook(publicUrl));
+
+    }).catch(error => {
+        console.log('Can not connect to ngrok server. Is it running?');
+        console.error(error);
+        process.exit(1);
+    });
 }
