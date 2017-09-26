@@ -56,7 +56,7 @@ function checkUrlAvailability(botResponse, urlToCheck) {
 const logger = createLogger();
 
 if (!process.env.VIBER_PUBLIC_ACCOUNT_ACCESS_TOKEN_KEY) {
-    logger.debug('Could not find the Viber Public Account access token key in your environment variable. Please make sure you followed readme guide.');
+    logger.debug('Could not find the Viber account access token key in your environment variable. Please make sure you followed readme guide.');
     return;
 }
 

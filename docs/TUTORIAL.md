@@ -47,15 +47,15 @@ git --version
 If you don't have Git, grab the installers from the [git website](https://git-scm.com/).
 
 
-## Set up your Viber Public Account
-* Follow the steps to create a [Public Account](https://developers.viber.com/docs/general/getting-started-with-bots/).
-* Extract the [Public Account authentication token](https://developers.viber.com/docs/general/public-accounts/#authentication-token) - The authentication token is generated upon Public Account creation and can be viewed by the account's admins in the "edit info" screen of their Public Account.
+## Set up your Viber API Account
+* Follow the steps to create a [Viber API Account](https://developers.viber.com/docs/general/get-started/#get-started-with-bots/).
+* Extract the [account authentication token](https://developers.viber.com/docs/faq/#authentication-tokens) - The authentication token is a unique account identifier used to validate your account in all API requests. Once your account is created your authentication token will appear in the account’s “edit info” screen (for admins only). Each request posted to Viber by the account will need to contain the token.
 
 ![][1]
 
 ## Setting up the project
 
-Now that we have our Public Account authentication token we can start to setup our NodeJs project.
+Now that we have our account authentication token we can start to setup our NodeJs project.
 
 Create a new folder for your bot project
 
@@ -103,7 +103,7 @@ Here’s the content of the package.json:
 
 Move to your text editor and **create** the file `index.js` within our project folder.
 
-Firstly, let's import and configure our bot with your [Public Account authentication token](https://developers.viber.com/docs/general/public-accounts/#authentication-token) and logger. **Make sure** you paste the Public Account authentication token during initialization.
+Firstly, let's import and configure our bot with your [Account authentication token](https://developers.viber.com/docs/faq/#authentication-tokens) and logger. **Make sure** you paste the account authentication token during initialization.
 
 ```javascript
 const ViberBot  = require('viber-bot').Bot;
@@ -126,7 +126,7 @@ const logger = createLogger();
 
 // Creating the bot with access token, name and avatar
 const bot = new ViberBot(logger, {
-    authToken: "Your Public Account access token goes here", // <--- Paste your token here
+    authToken: "Your account access token goes here", // <--- Paste your token here
     name: "Is It Up",  // <--- Your bot name here
     avatar: "http://api.adorable.io/avatar/200/isitup" // It is recommended to be 720x720, and no more than 100kb.
 });
