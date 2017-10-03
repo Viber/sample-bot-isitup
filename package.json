@@ -15,17 +15,18 @@
   },
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^4.0.0",
     "express": "4.13.4",
-    "request": "^2.79.0",
-    "viber-bot": "^1.0.7",
-    "winston": "^2.3.0",
+    "request": "^2.83.0",
+    "viber-bot": "^1.0.13",
+    "winston": "^2.4.0",
     "winston-console-formatter": "^0.3.1"
   },
   "devDependencies": {
-    "moniker": "^0.1.2",
-    "prompt": "^1.0.0",
     "eslint": "^2.10.1",
-    "shelljs": "^0.7.7",
-    "nodeunit": "~0.10.2"
+    "moniker": "^0.1.2",
+    "nodeunit": "~0.10.2",
+    "prompt": "^1.0.0",
+    "shelljs": "^0.7.8"
   }
 }
