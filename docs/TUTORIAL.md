@@ -85,7 +85,8 @@ Here’s the content of the package.json:
   "description": "A bot interface to work with Viber API",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "author": "",
   "dependencies": {
