@@ -73,7 +73,7 @@ npm init
 Now let’s install our dependencies:
 
 ```bash
-npm i --save viber-bot express request winston winston-console-formatter
+npm i --save viber-bot express request winston@2.4.0 winston-console-formatter@0.3.1
 ```
 
 Here’s the content of the package.json:
@@ -92,7 +92,7 @@ Here’s the content of the package.json:
     "express": "4.13.4",
     "request": "^2.79.0",
     "viber-bot": "^1.0.6",
-    "winston": "^2.3.0",
+    "winston": "^2.4.0",
     "winston-console-formatter": "^0.3.1"
   },
   "license": "ISC"
