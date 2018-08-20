@@ -198,7 +198,7 @@ Finally, we'd like to direct any text message to the `checkUrlAvailability` func
 ```javascript
 bot.onTextMessage(/./, (message, response) => {
     checkUrlAvailability(response, message.text);
-}
+})
 ```
 
 ## Deployment
