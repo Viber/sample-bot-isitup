@@ -73,7 +73,7 @@ npm init
 Now let’s install our dependencies:
 
 ```bash
-npm i --save viber-bot express request winston winston-console-formatter
+npm i --save viber-bot express request winston@2.4.0 winston-console-formatter@0.3.1
 ```
 
 Here’s the content of the package.json:
@@ -85,14 +85,15 @@ Here’s the content of the package.json:
   "description": "A bot interface to work with Viber API",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "author": "",
   "dependencies": {
     "express": "4.13.4",
     "request": "^2.79.0",
     "viber-bot": "^1.0.6",
-    "winston": "^2.3.0",
+    "winston": "^2.4.0",
     "winston-console-formatter": "^0.3.1"
   },
   "license": "ISC"
@@ -197,7 +198,7 @@ Finally, we'd like to direct any text message to the `checkUrlAvailability` func
 ```javascript
 bot.onTextMessage(/./, (message, response) => {
     checkUrlAvailability(response, message.text);
-}
+})
 ```
 
 ## Deployment
